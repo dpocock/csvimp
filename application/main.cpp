@@ -35,7 +35,8 @@ CSVImpPluginInterface *csvimpInterface = 0;
 
 bool loadPlugin()
 {
-  QDir pluginsDir(QApplication::applicationDirPath());
+  //QDir pluginsDir(QApplication::applicationDirPath());
+  QDir pluginsDir("/usr/lib/csvimp");
 
   while (! pluginsDir.exists("plugins") && pluginsDir.cdUp())
     ;
