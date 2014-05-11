@@ -30,18 +30,18 @@ MOC_DIR     = tmp
 UI_DIR      = tmp
 
 INCLUDEPATH += ../csvimpcommon ../csvimpcommon/images \
-               ../$${OPENRPT_DIR}/common ../$${OPENRPT_DIR}/MetaSQL
+               $${OPENRPT_DIR}/common $${OPENRPT_DIR}/MetaSQL
 win32:INCLUDEPATH += .
 DEPENDPATH  += $${INCLUDEPATH}
-LIBS += -L../$${OPENRPT_BLD}/lib -lcommon -lMetaSQL
+LIBS += -L$${OPENRPT_BLD} -lcommon -lMetaSQL
 
 win32-msvc* {
   PRE_TARGETDEPS += ../$${OPENRPT_BLD}/lib/common.lib   \
                     ../$${OPENRPT_BLD}/lib/MetaSQL.lib  \
 
 } else {
-  PRE_TARGETDEPS += ../$${OPENRPT_BLD}/lib/libcommon.a  \
-                    ../$${OPENRPT_BLD}/lib/libMetaSQL.a \
+  PRE_TARGETDEPS += $${OPENRPT_BLD}/libcommon.a  \
+                    $${OPENRPT_BLD}/libMetaSQL.a \
 }
 
 FORMS    = csvaddmapinputdialog.ui \

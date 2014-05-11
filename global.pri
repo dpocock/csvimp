@@ -8,27 +8,9 @@
 # to be bound by its terms.
 #
 
-exists(../../../../openrpt) {
-  OPENRPT_DIR = ../../../../openrpt
-}
-exists(../../../openrpt) {
-  OPENRPT_DIR = ../../../openrpt
-}
-exists(../../openrpt) {
-  OPENRPT_DIR = ../../openrpt
-}
-exists(../openrpt) {
-  OPENRPT_DIR = ../openrpt
-}
-
-! exists($${OPENRPT_DIR}) {
-  error("Could not set the OPENRPT_DIR qmake variable.")
-}
-
-OPENRPT_BLD=$${OPENRPT_DIR}
-exists($${OPENRPT_DIR}-build-desktop) {
-  OPENRPT_BLD=$${OPENRPT_DIR}-build-desktop
-}
+OPENRPT_DIR = /usr/include/openrpt
+OPENRPT_BLD = /usr/lib/$(DEB_HOST_MULTIARCH)
+#OPENRPT_BLD = /usr/lib/openrpt
 
 macx:exists(macx.pri) {
   include(macx.pri)

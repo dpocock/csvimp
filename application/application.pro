@@ -20,22 +20,22 @@ MOC_DIR     = tmp
 UI_DIR      = tmp
 
 INCLUDEPATH += ../csvimpcommon ../csvimpcommon/images ../plugin \
-               ../$${OPENRPT_DIR}/common ../$${OPENRPT_DIR}/MetaSQL \
-               ../$${OPENRPT_BLD}/common ../$${OPENRPT_BLD}/MetaSQL
+               $${OPENRPT_DIR}/common $${OPENRPT_DIR}/MetaSQL \
+               $${OPENRPT_BLD}/common $${OPENRPT_BLD}/MetaSQL
 INCLUDEPATH = $$unique(INCLUDEPATH)
 
 win32:INCLUDEPATH += .
 DEPENDPATH  += $${INCLUDEPATH}
 
-LIBS += -L../$${OPENRPT_BLD}/lib -lcommon -lMetaSQL
+LIBS += -L$${OPENRPT_BLD} -lcommon -lMetaSQL
 
 win32-msvc* {
   PRE_TARGETDEPS += ../$${OPENRPT_BLD}/lib/common.lib      \
                     ../$${OPENRPT_BLD}/lib/MetaSQL.lib     \
 
 } else {
-  PRE_TARGETDEPS += ../$${OPENRPT_BLD}/lib/libcommon.a      \
-                    ../$${OPENRPT_BLD}/lib/libMetaSQL.a     \
+  PRE_TARGETDEPS += $${OPENRPT_BLD}/libcommon.a      \
+                    $${OPENRPT_BLD}/libMetaSQL.a     \
 }
 win32:RC_FILE = application.rc
 
