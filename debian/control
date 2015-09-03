@@ -5,7 +5,7 @@ Maintainer: Debian xTuple Maintainers <pkg-xtuple-maintainers@lists.alioth.debia
 Uploaders:
  Andrew Shadura <andrewsh@debian.org>,
  Daniel Pocock <daniel@pocock.pro>
-Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), libqt4-dev (>= 4.1.0), libopenrpt-dev (>= 3.3.7)
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), libqt4-dev (>= 4.1.0), libopenrpt-dev (>= 3.3.10)
 Standards-Version: 3.9.6
 Homepage: http://www.xtuple.org/DataImportTool
 Vcs-Git: https://github.com/xtuple/csvimp
