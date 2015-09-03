@@ -1,4 +1,4 @@
-csvimp (0.5.1-1) unstable; urgency=medium
+csvimp (0.5.1-1~bpo8+1) jessie-backports; urgency=medium
 
   * New upstream release.
 
